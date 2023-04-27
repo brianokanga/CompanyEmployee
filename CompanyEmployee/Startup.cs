@@ -29,7 +29,8 @@ namespace CompanyEmployee
 		{
 			services.AddDbContext<RepositoryContext>(options =>
 				options.UseSqlServer(
-					Configuration.GetConnectionString("DefaultConnection")));
+					Configuration.GetConnectionString("DefaultConnection"),b=>
+					b.MigrationsAssembly("CompanyEmployees")));
 			services.AddControllers();
 		}
 
