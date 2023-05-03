@@ -1,9 +1,11 @@
 using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace CompanyEmployee
 {
 	public class WeatherForecast
 	{
+		[Required]
 		public DateTime Date { get; set; }
 
 		public int TemperatureC { get; set; }
